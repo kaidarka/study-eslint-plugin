@@ -1,0 +1,43 @@
+{
+  "name": "eslint-plugin-path-checker-kaidarka",
+  "version": "0.5.0",
+  "description": "test",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "kaidarka",
+  "main": "./lib/index.js",
+  "exports": "./lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lint": "npm-run-all \"lint:*\"",
+    "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
+    "lint:js": "eslint .",
+    "test": "mocha tests --recursive",
+    "update:eslint-docs": "eslint-doc-generator"
+  },
+  "dependencies": {
+    "micromatch": "^4.0.8",
+    "requireindex": "^1.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "eslint-doc-generator": "^2.0.0",
+    "eslint-plugin-eslint-plugin": "^7.3.2",
+    "eslint-plugin-n": "^17.0.0",
+    "mocha": "^11.0.0",
+    "npm-run-all2": "^6.1.2"
+  },
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.15.0"
+  },
+  "license": "MIT"
+}
