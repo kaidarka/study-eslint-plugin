@@ -81,5 +81,12 @@ ruleTester.run("path-checker", rule, {
       errors: [{ messageId: "path-not-valid" }],
       options: [],
     },
+    {
+      code: "import { Profile } from 'entities/Profile/model/types/profile';",
+      output: "import { Profile } from '../../model/types/profile';",
+      filename: "/home/user/project/src/entities/Profile/ui/ProfileCard/ProfileCard.tsx",
+      errors: [{ messageId: "path-not-valid" }],
+      options: [],
+    },
   ],
 });
